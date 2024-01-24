@@ -16,6 +16,8 @@ public class AdapterRunner implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
 
+        System.out.println("-----ES 1 ADAPTER-----");
+
         Info info = new Info();
         info.setNome("Aldo");
         info.setCognome("Baglio");
