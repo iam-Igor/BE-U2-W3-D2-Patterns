@@ -11,6 +11,8 @@ import java.time.LocalDate;
 
 @Component
 public class AdapterRunner implements CommandLineRunner {
+
+
     @Override
     public void run(String... args) throws Exception {
 
@@ -19,8 +21,11 @@ public class AdapterRunner implements CommandLineRunner {
         info.setCognome("Baglio");
         info.setDataDiNascita(LocalDate.of(1980, 02, 12));
 
+        // nel runner istanzio un nuovo Adapter e passo una istanza di info nel suo contructor
         DataSource dataSource = new Adapter(info);
 
+
+        // uso userData per ottenere i dati che mi servono
         UserData userData = new UserData();
         userData.getData(dataSource);
 
