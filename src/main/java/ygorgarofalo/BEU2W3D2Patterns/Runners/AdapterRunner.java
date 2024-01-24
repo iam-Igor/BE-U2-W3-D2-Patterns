@@ -22,6 +22,7 @@ public class AdapterRunner implements CommandLineRunner {
         info.setDataDiNascita(LocalDate.of(1980, 02, 12));
 
         // nel runner istanzio un nuovo Adapter e passo una istanza di info nel suo contructor
+        // assegno come tipo di dato DataSource perchè Adapter implementa la sua interfaccia
         DataSource dataSource = new Adapter(info);
 
 
